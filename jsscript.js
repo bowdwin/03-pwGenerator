@@ -1,28 +1,28 @@
 
 //variables to grab elements to use to see if checked
-var numericCheckboxid = document.getElementById("numericCheckbox");
-var speciaCharCheckboxid = document.getElementById("speciaCharCheckbox");
-var uppercaseCheckboxid = document.getElementById("uppercaseCheckbox");
-var lowercaseCheckboxid = document.getElementById("lowercaseCheckbox");
+// var numericCheckboxid = document.getElementById("numericCheckbox");
+// var speciaCharCheckboxid = document.getElementById("speciaCharCheckbox");
+// var uppercaseCheckboxid = document.getElementById("uppercaseCheckbox");
+// var lowercaseCheckboxid = document.getElementById("lowercaseCheckbox");
 
 var numberOfCharForPW = 15;
 
 //variables to check if the boxes are checked and store results
-var upperCheckboxidChecked = numericCheckbox.checked;
-var speciaCharCheckboxidChecked = speciaCharCheckboxid.checked;
-var uppercaseCheckboxidChecked = uppercaseCheckboxid.checked;
-var lowercaseCheckboxidChecked = lowercaseCheckboxid.checked;
+// var numericCheckboxidChecked = numericCheckbox.checked;
+// var speciaCharCheckboxidChecked = speciaCharCheckboxid.checked;
+// var uppercaseCheckboxidChecked = uppercaseCheckboxid.checked;
+// var lowercaseCheckboxidChecked = lowercaseCheckboxid.checked;
 
 
 //console log to check if true or false
-// console.log(upperCheckboxidChecked);
-// console.log(speciaCharCheckboxidChecked);
-// console.log(uppercaseCheckboxidChecked);
-// console.log(lowercaseCheckboxidChecked);
+console.log(upperCheckboxidChecked);
+console.log(speciaCharCheckboxidChecked);
+console.log(uppercaseCheckboxidChecked);
+console.log(lowercaseCheckboxidChecked);
 
 function getNumeric(checkifChecked) {
     if (checkifChecked === true) {
-        // console.log("Numeric True");
+        console.log("Numeric True");
         return Math.floor((Math.random() * 10) + 1);
     }
     else {
@@ -34,7 +34,7 @@ function specialCharfunc(checkifChecked) {
     var specChar = ["!", "@", "#", "$", "%", "^", "*", "(", ")"];
 
     if (checkifChecked === true) {
-        // console.log("Special Char True");
+        console.log("Special Char True");
         return specChar[Math.floor(Math.random() * specChar.length)];
     }
     else {
@@ -44,7 +44,7 @@ function specialCharfunc(checkifChecked) {
 
 function uppercase(checkifChecked) {
     if (checkifChecked === true) {
-        // console.log("uppercase True");
+        console.log("uppercase True");
         return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
     }
     else {
@@ -54,7 +54,7 @@ function uppercase(checkifChecked) {
 
 function lowercase(checkifChecked) {
     if (checkifChecked === true) {
-        // console.log("Lowercase True");
+        console.log("Lowercase True");
         return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
     }
     else {
@@ -88,10 +88,18 @@ function generatepw(a, b, c, d, ) {
     return finalPw;
 }
 
-var numericResults = (getNumeric(upperCheckboxidChecked));
-var specialCharResults = (specialCharfunc(speciaCharCheckboxidChecked));
-var uppercaseResults = (uppercase(uppercaseCheckboxidChecked));
-var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
+
+function clickGenerate() {
+    // Selecting the input element and get its value 
+    var inputVal = document.getElementById("pwlength").value;
+
+    return inputVal;
+    // Displaying the value
+}
+// var numericResults = (getNumeric(upperCheckboxidChecked));
+// var specialCharResults = (specialCharfunc(speciaCharCheckboxidChecked));
+// var uppercaseResults = (uppercase(uppercaseCheckboxidChecked));
+// var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
 
 // console.log(numericResults);
 // console.log(specialCharResults);
@@ -100,26 +108,42 @@ var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
 
 // console.log(generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts));
 
-finalPW = generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts);
+// finalPW = generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts);
 
 // console.log(finalPW + "this is finalPW");
 
 
-function final(a) {
+function final() {
+    var storeNumofChar = clickGenerate();
+    var numericCheckboxid = document.getElementById("numericCheckbox");
+    var speciaCharCheckboxid = document.getElementById("speciaCharCheckbox");
+    var uppercaseCheckboxid = document.getElementById("uppercaseCheckbox");
+    var lowercaseCheckboxid = document.getElementById("lowercaseCheckbox");
+
+    var numericCheckboxidChecked = numericCheckboxid.checked;
+    var speciaCharCheckboxidChecked = speciaCharCheckboxid.checked;
+    var uppercaseCheckboxidChecked = uppercaseCheckboxid.checked;
+    var lowercaseCheckboxidChecked = lowercaseCheckboxid.checked;
+
     combinedPass = "";
-    for (i = 0; i < a; i++) {
-        var numericResults = (getNumeric(upperCheckboxidChecked));
+    for (i = 0; i < storeNumofChar; i++) {
+        // calls each function to get a random character from each checkbox
+        var numericResults = (getNumeric(numericCheckboxidChecked));
         var specialCharResults = (specialCharfunc(speciaCharCheckboxidChecked));
         var uppercaseResults = (uppercase(uppercaseCheckboxidChecked));
         var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
         combinedPass += generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts);
-        // console.log(combinedPass + "combines pass inside final function");
+        console.log(combinedPass);
+
     }
     // console.log(combinedPass + "conbimed pass");
-    return combinedPass;
+    alert(combinedPass);
+
 
 }
 
-var generatedPWfinal = final(numberOfCharForPW);
-console.log(generatedPWfinal + "  this is the final PW");
+// var generatedPWfinal = final();
+// alert(generatedPWfinal);
+// console.log(generatedPWfinal + "  this is the final PW");
+// alert(generatedPWfinal);
 // console.log(generateFinalFinal(numberOfCharForPW, (generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts))))
