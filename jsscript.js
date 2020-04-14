@@ -5,7 +5,7 @@
 // var uppercaseCheckboxid = document.getElementById("uppercaseCheckbox");
 // var lowercaseCheckboxid = document.getElementById("lowercaseCheckbox");
 
-var numberOfCharForPW = 15;
+// var numberOfCharForPW = 15;
 
 //variables to check if the boxes are checked and store results
 // var numericCheckboxidChecked = numericCheckbox.checked;
@@ -15,10 +15,10 @@ var numberOfCharForPW = 15;
 
 
 //console log to check if true or false
-console.log(upperCheckboxidChecked);
-console.log(speciaCharCheckboxidChecked);
-console.log(uppercaseCheckboxidChecked);
-console.log(lowercaseCheckboxidChecked);
+// console.log(upperCheckboxidChecked);
+// console.log(speciaCharCheckboxidChecked);
+// console.log(uppercaseCheckboxidChecked);
+// console.log(lowercaseCheckboxidChecked);
 
 function getNumeric(checkifChecked) {
     if (checkifChecked === true) {
@@ -126,19 +126,26 @@ function final() {
     var lowercaseCheckboxidChecked = lowercaseCheckboxid.checked;
 
     combinedPass = "";
-    for (i = 0; i < storeNumofChar; i++) {
-        // calls each function to get a random character from each checkbox
-        var numericResults = (getNumeric(numericCheckboxidChecked));
-        var specialCharResults = (specialCharfunc(speciaCharCheckboxidChecked));
-        var uppercaseResults = (uppercase(uppercaseCheckboxidChecked));
-        var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
-        combinedPass += generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts);
-        console.log(combinedPass);
 
+    if (storeNumofChar > 7 && storeNumofChar < 129) {
+
+
+        for (i = 0; i < storeNumofChar; i++) {
+            // calls each function to get a random character from each checkbox
+            var numericResults = (getNumeric(numericCheckboxidChecked));
+            var specialCharResults = (specialCharfunc(speciaCharCheckboxidChecked));
+            var uppercaseResults = (uppercase(uppercaseCheckboxidChecked));
+            var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
+            combinedPass += generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts);
+            console.log(combinedPass);
+
+        }
+        // console.log(combinedPass + "conbimed pass");
+        alert(combinedPass);
     }
-    // console.log(combinedPass + "conbimed pass");
-    alert(combinedPass);
-
+    else {
+        alert("Please enter characters between a number between 8-128");
+    }
 
 }
 
