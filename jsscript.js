@@ -15,14 +15,14 @@ var lowercaseCheckboxidChecked = lowercaseCheckboxid.checked;
 
 
 //console log to check if true or false
-console.log(upperCheckboxidChecked);
-console.log(speciaCharCheckboxidChecked);
-console.log(uppercaseCheckboxidChecked);
-console.log(lowercaseCheckboxidChecked);
+// console.log(upperCheckboxidChecked);
+// console.log(speciaCharCheckboxidChecked);
+// console.log(uppercaseCheckboxidChecked);
+// console.log(lowercaseCheckboxidChecked);
 
 function getNumeric(checkifChecked) {
     if (checkifChecked === true) {
-        console.log("Numeric True");
+        // console.log("Numeric True");
         return Math.floor((Math.random() * 10) + 1);
     }
     else {
@@ -33,8 +33,8 @@ function getNumeric(checkifChecked) {
 function specialCharfunc(checkifChecked) {
     var specChar = ["!", "@", "#", "$", "%", "^", "*", "(", ")"];
 
-    if (checkifChecked === false) {
-        console.log("Special Char True");
+    if (checkifChecked === true) {
+        // console.log("Special Char True");
         return specChar[Math.floor(Math.random() * specChar.length)];
     }
     else {
@@ -43,8 +43,8 @@ function specialCharfunc(checkifChecked) {
 }
 
 function uppercase(checkifChecked) {
-    if (checkifChecked === false) {
-        console.log("uppercase True");
+    if (checkifChecked === true) {
+        // console.log("uppercase True");
         return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
     }
     else {
@@ -54,7 +54,7 @@ function uppercase(checkifChecked) {
 
 function lowercase(checkifChecked) {
     if (checkifChecked === true) {
-        console.log("Lowercase True");
+        // console.log("Lowercase True");
         return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
     }
     else {
@@ -70,38 +70,56 @@ function generatepw(a, b, c, d, ) {
     var finalPw = "";
 
 
+
     for (var i = 0; i < listOfItems.length; i++) {
         if (listOfItems[i] === false) {
             //do nothing
-            console.log(listOfItems[i]);
+            // console.log(listOfItems[i]);
         }
         else {
             //add to list
             var listToRandomize = listToRandomize.concat(listOfItems[i]);
-            console.log(listToRandomize);
+            // console.log(listToRandomize);
         }
     }
     finalPw = finalPw.concat(listToRandomize[Math.floor(Math.random() * listToRandomize.length)]);
-    console.log(finalPw + " this is final pw");
+    // console.log(finalPw + " this is final pw for single char");
     // return (listToRandomize[Math.floor(Math.random() * listToRandomize.length)])
     return finalPw;
 }
-
-
-// console.log(getNumeric(upperCheckboxidChecked));
-// console.log(specialCharfunc(speciaCharCheckboxidChecked));
-// console.log(uppercase(uppercaseCheckboxidChecked));
-// console.log(lowercase(lowercaseCheckboxidChecked));
 
 var numericResults = (getNumeric(upperCheckboxidChecked));
 var specialCharResults = (specialCharfunc(speciaCharCheckboxidChecked));
 var uppercaseResults = (uppercase(uppercaseCheckboxidChecked));
 var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
 
-console.log(numericResults);
-console.log(specialCharResults);
-console.log(uppercaseResults);
-console.log(lowercaseResuts);
+// console.log(numericResults);
+// console.log(specialCharResults);
+// console.log(uppercaseResults);
+// console.log(lowercaseResuts);
 
-console.log(generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts));
+// console.log(generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts));
 
+finalPW = generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts);
+
+// console.log(finalPW + "this is finalPW");
+
+
+function final(a) {
+    combinedPass = "";
+    for (i = 0; i < a; i++) {
+        var numericResults = (getNumeric(upperCheckboxidChecked));
+        var specialCharResults = (specialCharfunc(speciaCharCheckboxidChecked));
+        var uppercaseResults = (uppercase(uppercaseCheckboxidChecked));
+        var lowercaseResuts = (lowercase(lowercaseCheckboxidChecked));
+        combinedPass += generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts);
+        // console.log(combinedPass + "combines pass inside final function");
+    }
+    // console.log(combinedPass + "conbimed pass");
+    return combinedPass;
+
+}
+
+var generatedPWfinal = final(numberOfCharForPW);
+console.log(generatedPWfinal + "  this is the final PW");
+// console.log(generateFinalFinal(numberOfCharForPW, (generatepw(numericResults, specialCharResults, uppercaseResults, lowercaseResuts))))
