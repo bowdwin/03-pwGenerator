@@ -76,6 +76,8 @@ function clickGenerate() {
     return inputVal;
 }
 
+
+
 //final function that calls all above functions and inputs total power into box on bottom
 function final() {
 
@@ -108,12 +110,23 @@ function final() {
         }
         else {
             document.getElementById("totalPower").value = combinedPass
+            // copyPassword();
         }
     }
     else if (storeNumofChar > 127) {
         alert("You have selected too much Strength and might explode on impact, please select 8-128");
     }
     else {
-        alert("You have selected too little strength to KICK ASS, please select 8-128");
+        alert("You haven't selected enough strength and will be too weak, please select 8-128");
     }
+}
+
+function copyPassword() {
+
+    document.getElementById("totalPower").select();
+
+    document.execCommand("Copy");
+
+    alert("Your Power has been Cloned to Clipboard and is ready for Deployment");
+
 }
