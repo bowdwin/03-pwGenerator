@@ -1,76 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+<div class="bg">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
+    <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"> Password Generator</a>
-    </nav>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img style="padding-bottom: 5px;"
+                    src="https://fontmeme.com/permalink/200417/90f91529c03daca87a1d1fc11bcc7320.png"
+                    alt="harry-potter-font"></img></a>
+        </nav>
+        <div class="container">
 
-    <div class="container">
+            <div class="row " style="margin-top: 240px; padding-left: 180px">
 
-        <div class="row">
+                <div class="col-lg-6 col-sm-12 mx-auto justify-content-center">
 
-            <div class="col-lg-6 col-sm-12 mx-auto">
-
-                <div class="content">
-                    <h4>Password Generator</h4>
-                    <br />
-                    <input type="text" placeholder="enter pw length 1-128" id="pwlength">
-                    <br />
-                    <br />
+                    <div class="content">
+                        <img style="padding-bottom: 5px;"
+                            src="https://fontmeme.com/permalink/200417/177731ec9abe5467e5905e09dc6846da.png"
+                            alt="harry-potter-font"></img>
+                        <br>
+                        <input style="margin-left: 30px;" type="text" placeholder="Enter 8-128" id="pwlength">
+                        <br />
+                        <br>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <img src="https://fontmeme.com/permalink/200417/a6b3c315550a895e30d6984f49b3f988.png"
+                        alt="harry-potter-font"></img>
                 </div>
-                <button type="button" onclick="final();">Get Value</button>
+            </div>
+            <div class="row" style="padding-left: 185px;">
+                <div class="col-lg-6 col-sm-12 mx-auto">
+                    <div class="form-check">
+                        <div class="custom-control custom-checkbox">
+                            <!-- <input type="checkbox" class="custom-control-input" id="numericCheckbox" checked> -->
 
+                            <input type="checkbox" class="custom-control-input" id="numericCheckbox">
+                            <label class="custom-control-label" for="numericCheckbox"> <img
+                                    src="https://fontmeme.com/permalink/200417/dc76bceb75494bd95a220f19a660a868.png"
+                                    alt="harry-potter-font"></img></label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="speciaCharCheckbox">
+                            <label class="custom-control-label" for="speciaCharCheckbox"><img
+                                    src="https://fontmeme.com/permalink/200417/e97258982e192d0e1468ff6632098e47.png"
+                                    alt="harry-potter-font"></img></label>
+
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="uppercaseCheckbox">
+                            <label class="custom-control-label" for="uppercaseCheckbox"><img
+                                    src="https://fontmeme.com/permalink/200417/2a0005a9994d92f3c0c0cd47af05c974.png"
+                                    alt="harry-potter-font"></img></label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="lowercaseCheckbox">
+                            <label class="custom-control-label" for="lowercaseCheckbox"><img
+                                    src="https://fontmeme.com/permalink/200417/c82febda0480fe646a8634b43ee1051c.png"
+                                    alt="harry-potter-font"></img></label>
+                        </div>
+                        <br>
+                        <div>
+                            <button style="margin-left: 30px;" class="btn btn-dark btn btn-outline-light" type="button"
+                                id="activate" onclick="final();"> <img style="padding-bottom: 5px;"
+                                    src="https://fontmeme.com/permalink/200417/21eb1b497c3d5aa836fb234ccd427f4e.png"
+                                    alt="harry-potter-font"></img></button>
+                        </div>
+                        <br>
+                        <div>
+                            <img src="https://fontmeme.com/permalink/200417/beec67a80b7498b84d274633d8461be6.png"
+                                style="padding-bottom: 5px;" alt="harry-potter-font"></img>
+                            <br>
+                            <input style="margin-left: 30px;" type="text" id="totalPower">
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
+
+            <script src="jsscript.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
         </div>
-
-        <div class="row">
-            <div class="col-lg-6 col-sm-12 mx-auto">
-                <div class="form-check">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="numericCheckbox" checked>
-                        <label class="custom-control-label" for="numericCheckbox">Include Numeric Numbers</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="speciaCharCheckbox" checked>
-                        <label class="custom-control-label" for="speciaCharCheckbox">Include Special Characters</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="uppercaseCheckbox" checked>
-                        <label class="custom-control-label" for="uppercaseCheckbox">Include Uppercase</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="lowercaseCheckbox" checked>
-                        <label class="custom-control-label" for="lowercaseCheckbox">Include Lowercase</label>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <script src="jsscript.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-</body>
+    </body>
+</div>
 
 </html>

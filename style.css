@@ -1,0 +1,12 @@
+.bg {
+    background-image: url("./images/ironmanwp.jpg"); /* The image used */
+    background-size: cover !important;
+    min-height: 100vh; 
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+
+  .navbar{
+    display: flex;
+  justify-content: space-around;}
