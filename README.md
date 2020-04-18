@@ -4,7 +4,7 @@ Iron Man Password/Power generator Homework Assignment 3
 Site link https://bowdwin.github.io/03-pwGenerator/
 ## About / Synopsis
 
-* This is our 3rd homework assignement. It's a password generator that takes anywhere from 8-128 characters and randonly generates a password bassed off what you selected for checkboxes
+* This is our 3rd homework assignement. It's a password generator that takes anywhere from 8-128 characters and randomly generates a password bassed off what you selected for checkboxes
 * It will send variouse popups if no Power Ups are selected or if strength is not between 8-128
 * Project status: working/prototype
 
