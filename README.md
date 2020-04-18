@@ -1,7 +1,7 @@
 # 03-pwGenerator Iron man hw-3
 
 Iron Man Password/Power generator Homework Assignment 3
-Site link https://bowdwin.github.io/02-bootstrapportfolio/
+Site link https://bowdwin.github.io/03-pwGenerator/
 ## About / Synopsis
 
 * This is our 3rd homework assignement. It's a password generator that takes anywhere from 8-128 characters and randonly generates a password bassed off what you selected for checkboxes
@@ -9,7 +9,7 @@ Site link https://bowdwin.github.io/02-bootstrapportfolio/
 * Project status: working/prototype
 
 
-## Screen shot of "Books"
+## Screen shot of "Power Generator AKA Password Generator"
 
 ![](images/screenshot.png)
 
