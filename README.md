@@ -16,4 +16,3 @@ Site link https://bowdwin.github.io/02-bootstrapportfolio/
 ## Image links
 Images referenced from the following 
 * Background image  http://getwallpapers.com/collection/iron-man-suit-wallpapers
-

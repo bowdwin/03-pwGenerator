@@ -38,7 +38,6 @@ function uppercase(checkifChecked) {
         return false;
     }
 }
-
 // function checks lowercase power is checked, if true then generate a random, if false, return booleon false
 function lowercase(checkifChecked) {
     if (checkifChecked === true) {
@@ -61,6 +60,7 @@ function generatepw(a, b, c, d, ) {
             //do nothing
         }
         else {
+            // add to random array
             var listToRandomize = listToRandomize.concat(listOfItems[i]);
         }
     }
@@ -68,19 +68,14 @@ function generatepw(a, b, c, d, ) {
     finalPw = finalPw.concat(listToRandomize[Math.floor(Math.random() * listToRandomize.length)]);
     return finalPw;
 }
-
 //grabs number of characters to use for pw from user input
 function clickGenerate() {
     var inputVal = document.getElementById("pwlength").value;
 
     return inputVal;
 }
-
-
-
 //final function that calls all above functions and inputs total power into box on bottom
 function final() {
-
     var numericCheckboxidChecked = numericCheckboxid.checked;
     var speciaCharCheckboxidChecked = speciaCharCheckboxid.checked;
     var uppercaseCheckboxidChecked = uppercaseCheckboxid.checked;
@@ -110,7 +105,6 @@ function final() {
         }
         else {
             document.getElementById("totalPower").value = combinedPass
-            // copyPassword();
         }
     }
     else if (storeNumofChar > 127) {
@@ -120,13 +114,10 @@ function final() {
         alert("You haven't selected enough strength and will be too weak, please select 8-128");
     }
 }
-
+// function to copy password
 function copyPassword() {
-
     document.getElementById("totalPower").select();
-
     document.execCommand("Copy");
-
     alert("Your Power has been Cloned to Clipboard and is ready for Deployment");
 
 }
