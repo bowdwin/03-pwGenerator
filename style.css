@@ -10,3 +10,10 @@
   .navbar{
     display: flex;
   justify-content: space-around;}
+
+  .borderbox {
+    border: silver solid 2px;
+    background-color: black;
+    padding: 7px;
+    margin-bottom: 3px;
+  }
